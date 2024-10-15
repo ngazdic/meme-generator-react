@@ -3,8 +3,8 @@ import TrollFace from '../TrollFace.png';
 
 function Nav() {
 	return (
-		<nav className='navbar navbar-expand-lg '>
-			<div className='container'>
+		<nav className='navbar navbar-expand-lg mb-5 '>
+			<div className='container '>
 				<div>
 					<img src={TrollFace} alt='' />
 					<h5 className='navbar-brand d-inline ps-3 text-white'>
