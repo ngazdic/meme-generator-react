@@ -40,10 +40,11 @@ function Meme() {
 			<div className='container d-flex justify-content-center mb-5'>
 				<form onSubmit={getImage}>
 					<div className='row mb-3'>
-						<div className='col-6'>
+						<div className='col-12 col-md-6'>
 							<label htmlFor='tText'>Top text</label>
 							<br />
 							<input
+								className='w-100'
 								id='tText'
 								type='text'
 								name='topText'
@@ -52,10 +53,11 @@ function Meme() {
 							/>
 						</div>
 
-						<div className='col-6'>
+						<div className='col-12 col-md-6 '>
 							<label htmlFor='bText'>Bottom text</label>
 							<br />
 							<input
+								className='w-100'
 								id='bText'
 								type='text'
 								name='bottomText'
