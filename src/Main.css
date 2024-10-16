@@ -12,7 +12,7 @@ nav {
 /*Main*/
 .container {
 	position: relative;
-	display: inline-block; /* Ensure the size of the container is based on its content */
+	display: inline-block;
 }
 
 .meme-image {
@@ -41,6 +41,15 @@ nav {
 }
 
 .meme-image {
-	width: 450px;
+	width: 470px;
 	height: 300px;
+}
+
+button {
+	background: linear-gradient(90deg, #672280, #a626d3);
+	color: white;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
 }

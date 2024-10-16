@@ -2,7 +2,6 @@ import React from 'react';
 import MemeImg from '../assets/meme.png';
 
 function Meme() {
-	// Ensure the component is defined
 	const [meme, setMeme] = React.useState({
 		topText: '',
 		bottomText: '',
@@ -18,8 +17,7 @@ function Meme() {
 	}, []);
 
 	function getImage(event) {
-		// Accept the event argument
-		event.preventDefault(); // Prevent default form submission
+		event.preventDefault();
 		const randomNumber = Math.floor(Math.random() * allMemes.length);
 		const randomImgUrl = allMemes[randomNumber].url;
 
@@ -30,10 +28,10 @@ function Meme() {
 	}
 
 	function handleForm(event) {
-		const { name, value } = event.target; // Correct destructuring
+		const { name, value } = event.target;
 		setMeme((prevState) => ({
 			...prevState,
-			[name]: value, // Use the name from the input
+			[name]: value,
 		}));
 	}
 
@@ -41,14 +39,14 @@ function Meme() {
 		<section className='meme-section'>
 			<div className='container d-flex justify-content-center mb-5'>
 				<form onSubmit={getImage}>
-					<div className='row'>
+					<div className='row mb-3'>
 						<div className='col-6'>
 							<label htmlFor='tText'>Top text</label>
 							<br />
 							<input
 								id='tText'
 								type='text'
-								name='topText' // Use the correct name here
+								name='topText'
 								value={meme.topText}
 								onChange={handleForm}
 							/>
@@ -60,21 +58,19 @@ function Meme() {
 							<input
 								id='bText'
 								type='text'
-								name='bottomText' // Use the correct name here
+								name='bottomText'
 								value={meme.bottomText}
 								onChange={handleForm}
 							/>
 						</div>
 					</div>
-					<button type='submit'>Get random image</button>
+					<button type='submit'>Get new meme image &#x1F5BC;</button>
 				</form>
 			</div>
 			<div className='position-relative container d-flex justify-content-center'>
 				<img className='meme-image' src={meme.randomImage} alt='' />
 				<p className='top-text position-absolute'>{meme.topText}</p>{' '}
-				{/* Correct rendering */}
 				<p className='bottom-text position-absolute'>{meme.bottomText}</p>{' '}
-				{/* Correct rendering */}
 			</div>
 		</section>
 	);
